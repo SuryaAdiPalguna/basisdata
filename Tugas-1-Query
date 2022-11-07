@@ -11,3 +11,8 @@ Buatlah query untuk:
 1. Cari nama seluruh siswa pada kelas "1C"
 2. Cari seluruh guru yang tidak menjadi wali kelas.
 3. Tampilkan siswa yang lahir setelah tanggal 1 Januari 2002.
+
+Jawab:
+1. π siswa-nama (σ kelas-nomor="1C" (siswa x kelas x jadwal x daftar-hadir))
+2. π guru-nig, guru-nama (σ guru-nig(guru) - guru-nig(kelas) (guru))
+3. π siswa-nim, siswa-nama, siswa-tanggal-lahir, siswa-alamat (σ siswa-tanggal-lahir>"01-01-2002" (siswa))
